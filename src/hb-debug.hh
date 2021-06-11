@@ -346,7 +346,11 @@ struct hb_no_trace_t {
 	 unsigned int line HB_UNUSED = 0) { return hb_forward<T> (v); }
 };
 
+#if HB_DEBUG
 #define return_trace(RET) return trace.ret (RET, HB_FUNC, __LINE__)
+#else
+#define return_trace(RET) return trace.ret (RET, NULL, 0)
+#endif
 
 
 /*
