@@ -1,0 +1,3 @@
+#define HB_TINY
+#define HAVE_FREETYPE
+#define HB_CUSTOM_MALLOC
